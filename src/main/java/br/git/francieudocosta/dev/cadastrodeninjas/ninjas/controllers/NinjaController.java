@@ -1,4 +1,4 @@
-package br.git.francieudocosta.dev.cadastrodeninjas;
+package br.git.francieudocosta.dev.cadastrodeninjas.ninjas.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

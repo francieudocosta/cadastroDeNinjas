@@ -1,5 +1,6 @@
-package br.git.francieudocosta.dev.cadastrodeninjas;
+package br.git.francieudocosta.dev.cadastrodeninjas.ninjas;
 
+import br.git.francieudocosta.dev.cadastrodeninjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,10 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    @ManyToOne
+    @JoinColumn(name = "missao_id") //fk
+    private MissoesModel missao;
 
     public NinjaModel() {
     }
