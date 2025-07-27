@@ -1,6 +1,7 @@
 package br.git.francieudocosta.dev.cadastrodeninjas.Missoes;
 
 import br.git.francieudocosta.dev.cadastrodeninjas.ninjas.NinjaModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,5 +24,6 @@ public class MissoesModel {
 
     @OneToMany(mappedBy = "missao")
     @Setter(AccessLevel.NONE)
+    @JsonIgnore
     private List<NinjaModel> ninjas = new ArrayList<>();
 }
