@@ -1,6 +1,5 @@
 package br.git.francieudocosta.dev.cadastrodeninjas.Missoes.controllers;
 
-import br.git.francieudocosta.dev.cadastrodeninjas.Missoes.MissoesModel;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
