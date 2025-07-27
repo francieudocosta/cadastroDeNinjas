@@ -4,7 +4,6 @@ import br.git.francieudocosta.dev.cadastrodeninjas.ninjas.NinjaModel;
 import br.git.francieudocosta.dev.cadastrodeninjas.ninjas.service.NinjaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -27,15 +26,15 @@ public class NinjaController {
     }
 
     @GetMapping("/{id}")
-    public String mostrarNinjaPorId(@PathVariable Long id) {
+    public NinjaModel mostrarNinjaPorId(@PathVariable Long id) {
 
-        return "Ninja encontrada com sucesso!";
+        return ninjaService.listarNinjaPorId(id);
     }
 
     @PutMapping("/{id}")
-    public  String atualizarNinja(Long id) {
+    public  NinjaModel atualizarNinja(@PathVariable Long id) {
 
-        return "Ninja atualizada com sucesso!";
+        return null;
     }
 
     @DeleteMapping("/{id}")
